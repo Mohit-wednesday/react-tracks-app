@@ -57,14 +57,13 @@ const TracksGrid = styled.div`
     display: grid;
     display: grid;
     grid-template-columns: 1fr;
-    /* gap: 1rem; */
     @media screen and (min-width: 790px) {
       grid-template-columns: 1fr 1fr;
     }
     @media screen and (min-width: 1000px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    gap: 0.25rem;
+    gap: 1rem;
   }
 `;
 
@@ -72,6 +71,7 @@ const BottomContainer = styled.div`
   && {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 10px auto;
     padding: 5px 50px;
     background-color: ${colors.primary};
@@ -86,7 +86,8 @@ export function ItunesContainer({
   padding,
   maxwidth,
   itunesData,
-  itunesError
+  itunesError,
+  intl
 }) {
   const [loading, setLoading] = useState(false);
   const [track, setTrack] = useState(null);
@@ -150,6 +151,27 @@ export function ItunesContainer({
     );
   };
 
+  const renderErrorState = () => {
+    let trackError;
+    if (itunesError) {
+      trackError = itunesError;
+    } else if (!get(itunesData, 'resultCount', 0)) {
+      trackError = 'artist_search_default';
+    }
+    return (
+      !loading &&
+      trackError && (
+        <CustomCard
+          color={itunesError ? 'red' : 'grey'}
+          title={intl.formatMessage({ id: 'itunes_list' })}
+          maxwidth="500"
+        >
+          <T id={trackError} />
+        </CustomCard>
+      )
+    );
+  };
+
   return (
     <>
       <Container padding={padding} maxwidth={maxwidth}>
@@ -163,7 +185,10 @@ export function ItunesContainer({
           />
         </CustomCard>
       </Container>
-      <BottomContainer>{renderTracks()}</BottomContainer>
+      <BottomContainer>
+        {renderTracks()}
+        {renderErrorState()}
+      </BottomContainer>
     </>
   );
 }
@@ -172,6 +197,7 @@ ItunesContainer.propTypes = {
   artistName: PropTypes.string,
   padding: PropTypes.number,
   maxwidth: PropTypes.number,
+  intl: PropTypes.object,
   dispatchArtistData: PropTypes.func,
   dispatchClearArtistData: PropTypes.func,
   itunesError: PropTypes.string,
