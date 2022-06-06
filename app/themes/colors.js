@@ -11,6 +11,7 @@ const secondary = '#f8c49c';
 const success = '#28a745';
 const error = '#dc3545';
 const gotoStories = '#1890ff';
+const trackCardColor = '#F3F4F6';
 
 const colors = {
   transparent: 'rgba(0,0,0,0)',
@@ -21,6 +22,7 @@ const colors = {
   success,
   error,
   gotoStories,
+  trackCardColor,
   theme: {
     lightMode: {
       primary,

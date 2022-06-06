@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackCard /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <a
+      href="/track/123"
+    >
+      <div
+        class="ant-card ant-card-bordered TrackCard__CustomCard-sc-10bk196-0 hcqShS"
+        data-testid="track-card"
+      >
+        <div
+          class="ant-card-body"
+        >
+          <img
+            class="TrackCard__Image-sc-10bk196-3 cVQUAq"
+            src="stub-image-url"
+          />
+          <div
+            class="TrackCard__Wrapper-sc-10bk196-2 jYEldH"
+          >
+            <div
+              class="ant-card-meta TrackCard__Text-sc-10bk196-1 hQCbRo"
+            >
+              <div
+                class="ant-card-meta-detail"
+              >
+                <div
+                  class="ant-card-meta-title"
+                >
+                  Sunflower
+                </div>
+                <div
+                  class="ant-card-meta-description"
+                >
+                  Post Malone
+                </div>
+              </div>
+            </div>
+            <button
+              class="ant-btn ant-btn-circle ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 dcVFqv"
+              type="button"
+            >
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle TrackCard__CustomPlay-sc-10bk196-5 cyzHzW"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <audio />
+        </div>
+      </div>
+    </a>
+  </div>
+</body>
+`;
