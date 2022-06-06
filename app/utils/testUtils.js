@@ -28,18 +28,23 @@ export const renderProvider = (children, history) => {
   const store = configureStore({}, browserHistory).store;
   return render(
     <Provider store={store}>
-      <ConnectedLanguageProvider messages={translationMessages}>
-        <ThemeProvider
-          theme={{
-            main: 'violet'
-          }}
-        >
-          {history ? <Router history={history}>{children}</Router> : <BrowserRouter>{children}</BrowserRouter>}
-        </ThemeProvider>
-      </ConnectedLanguageProvider>
+      <IntlProvider locale={DEFAULT_LOCALE} messages={translationMessages[DEFAULT_LOCALE]}>
+        <ConnectedLanguageProvider messages={translationMessages}>
+          <ThemeProvider
+            theme={{
+              main: 'violet'
+            }}
+          >
+            <IntlGlobalProvider>
+              {history ? <Router history={history}>{children}</Router> : <BrowserRouter>{children}</BrowserRouter>}
+            </IntlGlobalProvider>
+          </ThemeProvider>
+        </ConnectedLanguageProvider>
+      </IntlProvider>
     </Provider>
   );
 };
+
 export const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const apiResponseGenerator = (ok, data) => ({
   ok,
