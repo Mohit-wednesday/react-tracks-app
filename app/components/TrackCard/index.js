@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /**
  *
@@ -25,6 +26,9 @@ const CustomCard = styled(Card)`
     margin: 1rem 0;
     height: ${(props) => (props.height ? props.height : 10)}rem;
     background-color: ${colors.trackCardColor};
+    &:hover {
+      box-shadow: ${(props) => props.shadow};
+    }
   }
 `;
 
@@ -48,61 +52,63 @@ const Image = styled.img`
   }
 `;
 const CustomButton = styled(Button)`
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  border: none !important;
+  && {
+    border: none;
+    background: transparent;
+    box-sizing: content-box;
+    &:hover {
+      background: transparent;
+    }
+  }
 `;
 
-const CustomPlay = styled(PlayCircleOutlined)`
-  font-size: 2rem !important;
-  cursor: pointer;
-`;
-const CustomPause = styled(PauseCircleOutlined)`
-  font-size: 2rem !important;
-  cursor: pointer;
+const StyledAudio = styled.audio`
+  && {
+    visibility: hidden;
+  }
 `;
 
 function TrackCard({ track, handleOnClick }) {
   const { trackName, artistName, artworkUrl100, previewUrl, trackId } = track;
 
   const audioElement = useRef();
-  const [play, setPlay] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
-  const handleAudio = (event, url) => {
-    event.preventDefault();
-
-    const isPaused = audioElement.current.paused;
-    console.log(isPaused);
-    if (isPaused) {
-      audioElement.current.src = url;
-      audioElement.current.play();
-    } else {
-      audioElement.current.pause();
-    }
-    setPlay(!play);
-    if (handleOnClick) {
+  function onPause() {
+    setPlaying((val) => !val);
+    if (audioElement?.current?.ended) {
       handleOnClick(audioElement);
     }
-  };
+  }
+
+  function onPlayPause(e) {
+    e.preventDefault();
+    if (!playing) {
+      audioElement?.current?.play();
+      setPlaying((val) => !val);
+    } else {
+      audioElement?.current?.pause();
+    }
+    handleOnClick(audioElement);
+  }
 
   return (
     <Link to={`/track/${trackId}`}>
-      <CustomCard data-testid="track-card">
+      <CustomCard data-testid="track-card" shadow={`0 0 10px 1px ${colors.shadowColor}`}>
         <Image src={artworkUrl100} />
         <Wrapper>
-          <Text title={trackName} description={artistName} />
+          <Text title={trackName} description={artistName} data-testid="text-card" />
           <CustomButton
-            shape="circle"
-            onClick={(e) => handleAudio(e, previewUrl)}
+            data-testid="track-control-button"
+            onClick={(e) => onPlayPause(e)}
             icon={
-              <If condition={!audioElement.current?.paused && audioElement.current?.src} otherwise={<CustomPlay />}>
-                <CustomPause />
+              <If condition={playing} otherwise={<PlayCircleOutlined style={{ fontSize: '2rem' }} />}>
+                <PauseCircleOutlined style={{ fontSize: '2rem' }} />
               </If>
             }
           />
         </Wrapper>
-        <audio ref={audioElement}></audio>
+        <StyledAudio src={previewUrl} ref={audioElement} data-testid="audio" onPause={onPause} />
       </CustomCard>
     </Link>
   );

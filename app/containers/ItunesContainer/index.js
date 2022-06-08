@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 /**
  *
  * ItunesContainer
@@ -54,7 +52,6 @@ const Container = styled.div`
 
 const TracksGrid = styled.div`
   && {
-    display: grid;
     display: grid;
     grid-template-columns: 1fr;
     @media screen and (min-width: 790px) {
@@ -162,7 +159,7 @@ export function ItunesContainer({
       !loading &&
       trackError && (
         <CustomCard
-          color={itunesError ? 'red' : 'grey'}
+          color={itunesError ? colors.error : colors.sub}
           title={intl.formatMessage({ id: 'itunes_list' })}
           maxwidth="500"
         >

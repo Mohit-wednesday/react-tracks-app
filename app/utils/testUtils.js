@@ -28,19 +28,17 @@ export const renderProvider = (children, history) => {
   const store = configureStore({}, browserHistory).store;
   return render(
     <Provider store={store}>
-      <IntlProvider locale={DEFAULT_LOCALE} messages={translationMessages[DEFAULT_LOCALE]}>
-        <ConnectedLanguageProvider messages={translationMessages}>
-          <ThemeProvider
-            theme={{
-              main: 'violet'
-            }}
-          >
-            <IntlGlobalProvider>
-              {history ? <Router history={history}>{children}</Router> : <BrowserRouter>{children}</BrowserRouter>}
-            </IntlGlobalProvider>
-          </ThemeProvider>
-        </ConnectedLanguageProvider>
-      </IntlProvider>
+      <ConnectedLanguageProvider messages={translationMessages}>
+        <ThemeProvider
+          theme={{
+            main: 'violet'
+          }}
+        >
+          <IntlGlobalProvider>
+            {history ? <Router history={history}>{children}</Router> : <BrowserRouter>{children}</BrowserRouter>}
+          </IntlGlobalProvider>
+        </ThemeProvider>
+      </ConnectedLanguageProvider>
     </Provider>
   );
 };
@@ -50,3 +48,7 @@ export const apiResponseGenerator = (ok, data) => ({
   ok,
   data
 });
+
+export const createSpyOnAudio = (methodName, target, customImplementation) => {
+  return jest.spyOn(target ?? window.HTMLMediaElement.prototype, methodName).mockImplementation(customImplementation);
+};

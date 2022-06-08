@@ -12,7 +12,8 @@ const success = '#28a745';
 const error = '#dc3545';
 const gotoStories = '#1890ff';
 const trackCardColor = '#F3F4F6';
-
+const subText = '#808080';
+const shadowColor = '#D3D3D3';
 const colors = {
   transparent: 'rgba(0,0,0,0)',
   // Example colors:
@@ -23,6 +24,8 @@ const colors = {
   error,
   gotoStories,
   trackCardColor,
+  subText,
+  shadowColor,
   theme: {
     lightMode: {
       primary,
