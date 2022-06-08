@@ -4,24 +4,26 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <a
-      href="/track/123"
+      href="/track/1445949267"
     >
       <div
-        class="ant-card ant-card-bordered TrackCard__CustomCard-sc-10bk196-0 hcqShS"
+        class="ant-card ant-card-bordered TrackCard__CustomCard-sc-10bk196-0 fYvImm"
         data-testid="track-card"
+        shadow="0 0 10px 1px #D3D3D3"
       >
         <div
           class="ant-card-body"
         >
           <img
             class="TrackCard__Image-sc-10bk196-3 cVQUAq"
-            src="stub-image-url"
+            src="https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/100x100bb.jpg"
           />
           <div
             class="TrackCard__Wrapper-sc-10bk196-2 jYEldH"
           >
             <div
               class="ant-card-meta TrackCard__Text-sc-10bk196-1 hQCbRo"
+              data-testid="text-card"
             >
               <div
                 class="ant-card-meta-detail"
@@ -34,18 +36,20 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
                 <div
                   class="ant-card-meta-description"
                 >
-                  Post Malone
+                  Post Malone & Swae Lee
                 </div>
               </div>
             </div>
             <button
-              class="ant-btn ant-btn-circle ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 dcVFqv"
+              class="ant-btn ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 feeOnt"
+              data-testid="track-control-button"
               type="button"
             >
               <span
                 aria-label="play-circle"
-                class="anticon anticon-play-circle TrackCard__CustomPlay-sc-10bk196-5 cyzHzW"
+                class="anticon anticon-play-circle"
                 role="img"
+                style="font-size: 2rem;"
               >
                 <svg
                   aria-hidden="true"
@@ -66,7 +70,11 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
               </span>
             </button>
           </div>
-          <audio />
+          <audio
+            class="TrackCard__StyledAudio-sc-10bk196-5 etPQVC"
+            data-testid="audio"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/c4/1d/26/c41d2673-dd3f-f320-938f-79be41ae3841/mzaf_7670720480871265544.plus.aac.p.m4a"
+          />
         </div>
       </div>
     </a>

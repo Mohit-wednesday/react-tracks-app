@@ -67,8 +67,7 @@ exports[`<ItunesContainer /> container tests should render and match the snapsho
       class="ItunesContainer__BottomContainer-rg528l-4 iztByg"
     >
       <div
-        class="ant-card ant-card-bordered ItunesContainer__CustomCard-rg528l-0 iatbti"
-        color="grey"
+        class="ant-card ant-card-bordered ItunesContainer__CustomCard-rg528l-0 hpBJiT"
         maxwidth="500"
       >
         <div
