@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 /**
  *
  * TrackCard
@@ -13,9 +11,8 @@ import { Link } from 'react-router-dom';
 import { Card, Button } from 'antd';
 import { colors } from '@themes';
 import If from '@components/If';
+import T from '@app/components/T';
 import { PlayCircleOutlined, PauseCircleOutlined } from '@ant-design/icons';
-
-const { Meta } = Card;
 
 const CustomCard = styled(Card)`
   & > div {
@@ -32,7 +29,7 @@ const CustomCard = styled(Card)`
   }
 `;
 
-const Text = styled(Meta)`
+const Text = styled(T)`
   && {
     margin: 0.3rem;
     width: 15em;
@@ -68,9 +65,7 @@ const StyledAudio = styled.audio`
   }
 `;
 
-function TrackCard({ track, handleOnClick }) {
-  const { trackName, artistName, artworkUrl100, previewUrl, trackId } = track;
-
+function TrackCard({ trackName, artistName, artworkUrl100, previewUrl, trackId, handleOnClick }) {
   const audioElement = useRef();
   const [playing, setPlaying] = useState(false);
 
@@ -97,7 +92,18 @@ function TrackCard({ track, handleOnClick }) {
       <CustomCard data-testid="track-card" shadow={`0 0 10px 1px ${colors.shadowColor}`}>
         <Image src={artworkUrl100} />
         <Wrapper>
-          <Text title={trackName} description={artistName} data-testid="text-card" />
+          <If
+            condition={trackName}
+            otherwise={<Text data-testid="track_name_unavailable" id="track_name_unavailable" />}
+          >
+            <Text title={trackName} text={trackName} data-testid="track-name" />
+          </If>
+          <If
+            condition={artistName}
+            otherwise={<Text data-testid="artist_name_unavailable" id="artist_name_unavailable" />}
+          >
+            <Text title={artistName} text={artistName} data-testid="artist-name" />
+          </If>
           <CustomButton
             data-testid="track-control-button"
             onClick={(e) => onPlayPause(e)}
@@ -116,13 +122,11 @@ function TrackCard({ track, handleOnClick }) {
 
 TrackCard.propTypes = {
   handleOnClick: PropTypes.func,
-  track: PropTypes.shape({
-    trackName: PropTypes.string,
-    artistName: PropTypes.string,
-    artworkUrl100: PropTypes.string,
-    previewUrl: PropTypes.string,
-    trackId: PropTypes.number
-  })
+  trackName: PropTypes.string,
+  artistName: PropTypes.string,
+  artworkUrl100: PropTypes.string,
+  previewUrl: PropTypes.string,
+  trackId: PropTypes.number
 };
 
 export default TrackCard;
