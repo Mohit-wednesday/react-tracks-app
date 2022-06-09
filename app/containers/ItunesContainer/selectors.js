@@ -6,7 +6,7 @@ import get from 'lodash/get';
  * Direct selector to the itunesContainer state domain
  */
 
-const selectItunesContainerDomain = (state) => state.itunesContainer || initialState;
+export const selectItunesContainerDomain = (state) => state?.itunesContainer || initialState;
 
 export const selectItunesContainer = () => createSelector(selectItunesContainerDomain, (substate) => substate);
 
