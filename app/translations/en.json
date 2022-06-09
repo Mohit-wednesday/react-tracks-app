@@ -8,7 +8,12 @@
   "something_went_wrong": "Sorry. Something went wrong! Please try again in sometime.",
   "stories": "Go to Storybook",
   "artist_name": "Artist Name: {artistName}",
-  "artist_full_name": "Artist full name: {fullName}",
-  "artist_full_name_unavailable": "artistsitory full name unavaiable",
-  "wednesday_solutions": "Wednesday Solutions"
+  "artist_name_unavailable": "Artist name is unavailable",
+  "track_name_unavailable": "Track name is unavailable",
+  "release_date_unavailable": "Release date is unavailable",
+  "collection_name_unavailable": "Collection name is unavailable",
+  "genre_unavailable": "genre is unavailable",
+  "track_preview_unavailable": "Track preview is unavailable",
+  "wednesday_solutions": "Wednesday Solutions",
+  "itunes_empty_tracks": "No Tracks present for the Artist: {artistName}"
 }
