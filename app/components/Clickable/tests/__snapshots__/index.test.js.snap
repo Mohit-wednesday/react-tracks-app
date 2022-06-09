@@ -11,7 +11,7 @@ exports[`<Clickable /> component tests should render and match the snapshot 1`] 
         class="T__StyledText-gjlic1-0 kYcyRq"
         data-testid="t"
       >
-        Itunes List
+        Repository List
       </p>
     </div>
   </div>

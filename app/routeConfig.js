@@ -1,15 +1,10 @@
 import NotFound from '@containers/NotFoundPage/Loadable';
-import ItunesContainer from '@containers/ITunesContainer/Loadable';
+import HomeContainer from '@containers/HomeContainer/Loadable';
 import routeConstants from '@utils/routeConstants';
-import TrackDetails from './components/TrackDetails/index';
 export const routeConfig = {
-  itunes: {
-    component: ItunesContainer,
-    ...routeConstants.itunes
-  },
-  track: {
-    component: TrackDetails,
-    ...routeConstants.track
+  repos: {
+    component: HomeContainer,
+    ...routeConstants.repos
   },
   notFoundPage: {
     component: NotFound,

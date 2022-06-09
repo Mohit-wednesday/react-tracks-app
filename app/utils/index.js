@@ -52,11 +52,3 @@ export function isUAT() {
 export function isProd() {
   return process.env.ENVIRONMENT_NAME === 'production' && process.env.NODE_ENV === 'production';
 }
-
-export function dateFormat(date) {
-  return new Date(date).toLocaleDateString('en-IN', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric'
-  });
-}

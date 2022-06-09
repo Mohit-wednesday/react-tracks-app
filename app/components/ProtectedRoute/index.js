@@ -36,7 +36,7 @@ const ProtectedRoute = ({ isUserVerified, render: C, isLoggedIn, handleLogout, .
         return <C {...renderProps} />;
       }
     }
-    return <Redirect to={to} data-testid="redirect" />;
+    return <Redirect to={to} />;
   };
   return <Route {...rest} render={handleRedirection} />;
 };

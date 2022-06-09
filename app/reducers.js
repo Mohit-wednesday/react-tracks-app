@@ -4,7 +4,7 @@
 
 import { combineReducers } from 'redux';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
-import itunesContainerReducer from 'containers/ItunesContainer/reducer';
+import homeContainerReducer from 'containers/HomeContainer/reducer';
 
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
@@ -13,7 +13,7 @@ export default function createReducer(injectedReducer = {}) {
   const rootReducer = combineReducers({
     ...injectedReducer,
     language: languageProviderReducer,
-    itunesContainer: itunesContainerReducer
+    homeContainer: homeContainerReducer
   });
 
   return rootReducer;
