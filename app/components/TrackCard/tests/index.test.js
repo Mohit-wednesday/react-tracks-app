@@ -12,6 +12,7 @@ import { renderProvider, timeout, createSpyOnAudio } from '@utils/testUtils';
 import TrackCard from '../index';
 import history from '@app/utils/history';
 import testData from '../testData';
+import { translate } from '@app/components/IntlGlobalProvider/index';
 
 describe('<TrackCard />', () => {
   let handleOnClick = jest.fn();
@@ -32,7 +33,7 @@ describe('<TrackCard />', () => {
   });
 
   const MockTrackCard = () => {
-    return <TrackCard track={testData} handleOnClick={handleOnClick} />;
+    return <TrackCard {...testData} handleOnClick={handleOnClick} />;
   };
 
   it('should render and match the snapshot', () => {
@@ -47,8 +48,8 @@ describe('<TrackCard />', () => {
 
   it('should render trackName and artistName', () => {
     const { getByTestId } = renderProvider(<MockTrackCard />, history);
-    expect(getByTestId('text-card')).toHaveTextContent(testData.artistName);
-    expect(getByTestId('text-card')).toHaveTextContent(testData.trackName);
+    expect(getByTestId('artist-name')).toHaveTextContent(testData.artistName);
+    expect(getByTestId('track-name')).toHaveTextContent(testData.trackName);
   });
 
   it('should call handleOnClick and handleAudio callbacks accordingly', async () => {
@@ -81,5 +82,10 @@ describe('<TrackCard />', () => {
 
     fireEvent.click(getByTestId('track-control-button'));
     await waitFor(() => expect(pauseSpy).toHaveBeenCalledTimes(1));
+  });
+  it('should render the fallback text messages if data is empty', () => {
+    const { getByTestId } = renderProvider(<TrackCard />);
+    expect(getByTestId('track_name_unavailable')).toHaveTextContent(translate('track_name_unavailable'));
+    expect(getByTestId('artist_name_unavailable')).toHaveTextContent(translate('artist_name_unavailable'));
   });
 });

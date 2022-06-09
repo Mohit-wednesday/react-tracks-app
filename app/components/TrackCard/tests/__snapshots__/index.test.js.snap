@@ -21,25 +21,20 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
           <div
             class="TrackCard__Wrapper-sc-10bk196-2 jYEldH"
           >
-            <div
-              class="ant-card-meta TrackCard__Text-sc-10bk196-1 hQCbRo"
-              data-testid="text-card"
+            <p
+              class="T__StyledText-gjlic1-0 kYcyRq TrackCard__Text-sc-10bk196-1 hQCbRo"
+              data-testid="track-name"
+              title="Sunflower"
             >
-              <div
-                class="ant-card-meta-detail"
-              >
-                <div
-                  class="ant-card-meta-title"
-                >
-                  Sunflower
-                </div>
-                <div
-                  class="ant-card-meta-description"
-                >
-                  Post Malone & Swae Lee
-                </div>
-              </div>
-            </div>
+              Sunflower
+            </p>
+            <p
+              class="T__StyledText-gjlic1-0 kYcyRq TrackCard__Text-sc-10bk196-1 hQCbRo"
+              data-testid="artist-name"
+              title="Post Malone & Swae Lee"
+            >
+              Post Malone & Swae Lee
+            </p>
             <button
               class="ant-btn ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 feeOnt"
               data-testid="track-control-button"
