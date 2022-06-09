@@ -42,7 +42,6 @@ export const renderProvider = (children, history) => {
     </Provider>
   );
 };
-
 export const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const apiResponseGenerator = (ok, data) => ({
   ok,
