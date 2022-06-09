@@ -4,7 +4,8 @@ exports[`<ItunesContainer /> container tests should render and match the snapsho
 <body>
   <div>
     <div
-      class="ItunesContainer__Container-rg528l-2 jOkPHh"
+      class="ItunesContainer__Container-rg528l-1 hoRoDe"
+      data-testid="redirect"
     >
       <div
         class="ant-card ant-card-bordered ItunesContainer__CustomCard-rg528l-0 hpBJiT"
@@ -27,6 +28,7 @@ exports[`<ItunesContainer /> container tests should render and match the snapsho
             >
               <input
                 class="ant-input"
+                data-testid="search-input"
                 type="text"
                 value=""
               />
@@ -64,33 +66,23 @@ exports[`<ItunesContainer /> container tests should render and match the snapsho
       </div>
     </div>
     <div
-      class="ItunesContainer__BottomContainer-rg528l-4 iztByg"
+      class="ItunesContainer__BottomContainer-rg528l-2 ihiQzM"
     >
+      <div
+        data-testid="tracks-grid"
+      />
       <div
         class="ant-card ant-card-bordered ItunesContainer__CustomCard-rg528l-0 hpBJiT"
         maxwidth="500"
       >
         <div
-          class="ant-card-head"
-        >
-          <div
-            class="ant-card-head-wrapper"
-          >
-            <div
-              class="ant-card-head-title"
-            >
-              Itunes List
-            </div>
-          </div>
-        </div>
-        <div
           class="ant-card-body"
         >
           <p
             class="T__StyledText-gjlic1-0 kYcyRq"
-            data-testid="t"
+            data-testid="itunes-error"
           >
-            Search for a song track by entering it's artist name in the search box
+            No Tracks present for the Artist: 
           </p>
         </div>
       </div>
