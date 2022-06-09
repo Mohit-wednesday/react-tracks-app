@@ -7,7 +7,7 @@
  *
  */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
@@ -27,13 +27,6 @@ const theme = {
 };
 
 export function App({ location, history }) {
-  useEffect(() => {
-    if (location.search.includes('?redirect_uri=')) {
-      const routeToReplace = new URLSearchParams(location.search).get('redirect_uri');
-      history.replace(routeToReplace);
-    }
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
       <Header />

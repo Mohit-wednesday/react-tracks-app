@@ -34,14 +34,21 @@ export const renderProvider = (children, history) => {
             main: 'violet'
           }}
         >
-          {history ? <Router history={history}>{children}</Router> : <BrowserRouter>{children}</BrowserRouter>}
+          <IntlGlobalProvider>
+            {history ? <Router history={history}>{children}</Router> : <BrowserRouter>{children}</BrowserRouter>}
+          </IntlGlobalProvider>
         </ThemeProvider>
       </ConnectedLanguageProvider>
     </Provider>
   );
 };
+
 export const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const apiResponseGenerator = (ok, data) => ({
   ok,
   data
 });
+
+export const createSpyOnAudio = (methodName, target, customImplementation) => {
+  return jest.spyOn(target ?? window.HTMLMediaElement.prototype, methodName).mockImplementation(customImplementation);
+};
