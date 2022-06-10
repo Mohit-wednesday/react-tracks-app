@@ -1,5 +1,5 @@
 import NotFound from '@containers/NotFoundPage/Loadable';
-import ItunesContainer from '@containers/ITunesContainer/Loadable';
+import ItunesContainer from '@containers/ItunesContainer/Loadable';
 import routeConstants from '@utils/routeConstants';
 import TrackDetails from './components/TrackDetails/index';
 export const routeConfig = {
