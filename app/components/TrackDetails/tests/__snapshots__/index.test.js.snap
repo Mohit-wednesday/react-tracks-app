@@ -62,31 +62,31 @@ exports[`<TrackDetails /> should render and match the snapshot 1`] = `
               class="TrackDetails__TrackInfo-sc-18wb0c5-4 iojZno"
             >
               <p
-                class="T__StyledText-gjlic1-0 kYcyRq TrackDetails__TrackName-sc-18wb0c5-5 cwWSZm"
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__TrackName-sc-18wb0c5-5 cwWSZm"
                 data-testid="track-name-unavailable"
               >
                 Track name is unavailable
               </p>
               <p
-                class="T__StyledText-gjlic1-0 kYcyRq TrackDetails__ArtistName-sc-18wb0c5-6 jrVmVq"
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__ArtistName-sc-18wb0c5-6 jrVmVq"
                 data-testid="artist_name_unavailable"
               >
                 Artist name is unavailable
               </p>
               <p
-                class="T__StyledText-gjlic1-0 kYcyRq TrackDetails__ReleaseDate-sc-18wb0c5-7 ioqxwl"
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__ReleaseDate-sc-18wb0c5-7 ioqxwl"
                 data-testid="release_date_unavailable"
               >
                 Release date is unavailable
               </p>
               <p
-                class="T__StyledText-gjlic1-0 kYcyRq TrackDetails__CollectionName-sc-18wb0c5-8 gKrRoq"
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__CollectionName-sc-18wb0c5-8 gKrRoq"
                 data-testid="collection_name_unavailable"
               >
                 Collection name is unavailable
               </p>
               <p
-                class="T__StyledText-gjlic1-0 kYcyRq TrackDetails__Genre-sc-18wb0c5-9 gIZbJH"
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__Genre-sc-18wb0c5-9 gIZbJH"
                 data-testid="genre_unavailable"
               >
                 genre is unavailable
@@ -195,7 +195,7 @@ exports[`<TrackDetails /> should render and match the snapshot 1`] = `
                 </div>
               </div>
               <p
-                class="T__StyledText-gjlic1-0 kYcyRq"
+                class="T__StyledText-gjlic1-0 jbStwN"
                 data-testid="track_preview_unavailable"
               >
                 Track preview is unavailable

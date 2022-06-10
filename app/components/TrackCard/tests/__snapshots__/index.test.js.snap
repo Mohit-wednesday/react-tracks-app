@@ -7,7 +7,7 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
       href="/track/1445949267"
     >
       <div
-        class="ant-card ant-card-bordered TrackCard__CustomCard-sc-10bk196-0 fYvImm"
+        class="ant-card ant-card-bordered TrackCard__CustomCard-sc-10bk196-0 jjbRfM"
         data-testid="track-card"
         shadow="0 0 10px 1px #D3D3D3"
       >
@@ -15,28 +15,28 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
           class="ant-card-body"
         >
           <img
-            class="TrackCard__Image-sc-10bk196-3 cVQUAq"
+            class="TrackCard__Image-sc-10bk196-4 jDwvQN"
             src="https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/100x100bb.jpg"
           />
           <div
-            class="TrackCard__Wrapper-sc-10bk196-2 jYEldH"
+            class="TrackCard__Wrapper-sc-10bk196-3 iDkkpG"
           >
             <p
-              class="T__StyledText-gjlic1-0 kYcyRq TrackCard__Text-sc-10bk196-1 hQCbRo"
+              class="T__StyledText-gjlic1-0 jejlZC TrackCard__TrackName-sc-10bk196-1 lnkpXE"
               data-testid="track-name"
               title="Sunflower"
             >
               Sunflower
             </p>
             <p
-              class="T__StyledText-gjlic1-0 kYcyRq TrackCard__Text-sc-10bk196-1 hQCbRo"
+              class="T__StyledText-gjlic1-0 jDTUve TrackCard__ArtistName-sc-10bk196-2 cjRHXR"
               data-testid="artist-name"
               title="Post Malone & Swae Lee"
             >
               Post Malone & Swae Lee
             </p>
             <button
-              class="ant-btn ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 gFdyeI"
+              class="ant-btn ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-5 bocMxh"
               data-testid="track-control-button"
               padding="0.2"
               type="button"
@@ -67,7 +67,7 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
             </button>
           </div>
           <audio
-            class="TrackCard__StyledAudio-sc-10bk196-5 etPQVC"
+            class="TrackCard__StyledAudio-sc-10bk196-6 gqzHrN"
             data-testid="audio"
             src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/c4/1d/26/c41d2673-dd3f-f320-938f-79be41ae3841/mzaf_7670720480871265544.plus.aac.p.m4a"
           />

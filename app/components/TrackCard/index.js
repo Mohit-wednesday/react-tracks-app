@@ -19,7 +19,7 @@ const CustomCard = styled(Card)`
     display: flex;
   }
   && {
-    width: 22rem;
+    width: 24rem;
     margin: 1rem 0;
     height: ${(props) => (props.height ? props.height : 10)}rem;
     background-color: ${colors.trackCardColor};
@@ -29,10 +29,20 @@ const CustomCard = styled(Card)`
   }
 `;
 
-const Text = styled(T)`
+const TrackName = styled(T)`
   && {
     margin: 0.3rem;
     width: 15em;
+    color: ${colors.primary};
+    font-weight: bold;
+  }
+`;
+
+const ArtistName = styled(T)`
+  && {
+    margin: 0.3rem;
+    width: 15em;
+    font-size: small;
   }
 `;
 
@@ -93,17 +103,14 @@ function TrackCard({ trackName, artistName, artworkUrl100, previewUrl, trackId, 
       <CustomCard data-testid="track-card" shadow={`0 0 10px 1px ${colors.shadowColor}`}>
         <Image src={artworkUrl100} />
         <Wrapper>
-          <If
-            condition={trackName}
-            otherwise={<Text data-testid="track_name_unavailable" id="track_name_unavailable" />}
-          >
-            <Text title={trackName} text={trackName} data-testid="track-name" />
+          <If condition={trackName} otherwise={<T data-testid="track_name_unavailable" id="track_name_unavailable" />}>
+            <TrackName noOfLines={2} title={trackName} text={trackName} data-testid="track-name" />
           </If>
           <If
             condition={artistName}
-            otherwise={<Text data-testid="artist_name_unavailable" id="artist_name_unavailable" />}
+            otherwise={<T data-testid="artist_name_unavailable" id="artist_name_unavailable" />}
           >
-            <Text title={artistName} text={artistName} data-testid="artist-name" />
+            <ArtistName noOfLines={1} title={artistName} text={artistName} data-testid="artist-name" />
           </If>
           <CustomButton
             data-testid="track-control-button"
