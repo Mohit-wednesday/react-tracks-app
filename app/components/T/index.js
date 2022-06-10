@@ -11,10 +11,21 @@ import { PropTypes } from 'prop-types';
 import If from '@components/If';
 import { fonts } from '@app/themes';
 
+export function getLimitLineCSS(noOfLines) {
+  return `
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: ${noOfLines}; 
+  line-clamp: ${noOfLines}; 
+  -webkit-box-orient: vertical;`;
+}
+
 const StyledText = styled.p`
   && {
     ${(props) => props.marginBottom && `margin-bottom: ${props.marginBottom}px;`};
     ${(props) => props.font()};
+    ${(props) => props.noOfLines && getLimitLineCSS(props.noOfLines)}
   }
 `;
 const getFontStyle = (type) => (fonts.style[type] ? fonts.style[type] : () => {});

@@ -3,7 +3,7 @@
 exports[`<App /> container tests should render and match the snapshot 1`] = `
 <div>
   <header
-    class="ant-layout-header Header__StyledHeader-wp2jxc-0 jpfWFm"
+    class="ant-layout-header Header__StyledHeader-wp2jxc-0 dDSXXo"
     data-testid="header"
     intl="[object Object]"
   >
@@ -13,7 +13,7 @@ exports[`<App /> container tests should render and match the snapshot 1`] = `
       src="IMAGE_MOCK"
     />
     <p
-      class="T__StyledText-gjlic1-0 kYTaGb Header__Title-wp2jxc-2 cqzBIP"
+      class="T__StyledText-gjlic1-0 dDQWWc Header__Title-wp2jxc-2 kxRith"
       data-testid="t"
     >
       Wednesday Solutions
