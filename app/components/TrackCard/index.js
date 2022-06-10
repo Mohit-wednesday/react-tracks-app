@@ -53,6 +53,7 @@ const CustomButton = styled(Button)`
     border: none;
     background: transparent;
     box-sizing: content-box;
+    padding: ${(props) => props.padding}rem;
     &:hover {
       background: transparent;
     }
@@ -106,6 +107,7 @@ function TrackCard({ trackName, artistName, artworkUrl100, previewUrl, trackId, 
           </If>
           <CustomButton
             data-testid="track-control-button"
+            padding="0.2"
             onClick={(e) => onPlayPause(e)}
             icon={
               <If condition={playing} otherwise={<PlayCircleOutlined style={{ fontSize: '2rem' }} />}>

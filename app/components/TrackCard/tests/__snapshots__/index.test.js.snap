@@ -36,8 +36,9 @@ exports[`<TrackCard /> should render and match the snapshot 1`] = `
               Post Malone & Swae Lee
             </p>
             <button
-              class="ant-btn ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 feeOnt"
+              class="ant-btn ant-btn-icon-only TrackCard__CustomButton-sc-10bk196-4 gFdyeI"
               data-testid="track-control-button"
+              padding="0.2"
               type="button"
             >
               <span
