@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackDetails /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="TrackDetails__StyledContainer-sc-18wb0c5-0 bfxYEi"
+      data-testid="track-details"
+    >
+      <div
+        class="ant-card ant-card-bordered"
+      >
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="TrackDetails__TrackContent-sc-18wb0c5-3 cwZvTp"
+          >
+            <div
+              class="TrackDetails__StyledImageContainer-sc-18wb0c5-2 doYUpH"
+            >
+              <div
+                class="ant-image"
+                style="width: 95%; height: 95%;"
+              >
+                <img
+                  class="ant-image-img TrackDetails__StyledImage-sc-18wb0c5-1 gzUmxq"
+                  src=""
+                  style="height: 95%;"
+                />
+                <div
+                  class="ant-image-mask"
+                >
+                  <div
+                    class="ant-image-mask-info"
+                  >
+                    <span
+                      aria-label="eye"
+                      class="anticon anticon-eye"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="eye"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"
+                        />
+                      </svg>
+                    </span>
+                    Preview
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="TrackDetails__TrackInfo-sc-18wb0c5-4 iojZno"
+            >
+              <p
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__TrackName-sc-18wb0c5-5 cwWSZm"
+                data-testid="track-name-unavailable"
+              >
+                Track name is unavailable
+              </p>
+              <p
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__ArtistName-sc-18wb0c5-6 jrVmVq"
+                data-testid="artist_name_unavailable"
+              >
+                Artist name is unavailable
+              </p>
+              <p
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__ReleaseDate-sc-18wb0c5-7 ioqxwl"
+                data-testid="release_date_unavailable"
+              >
+                Release date is unavailable
+              </p>
+              <p
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__CollectionName-sc-18wb0c5-8 gKrRoq"
+                data-testid="collection_name_unavailable"
+              >
+                Collection name is unavailable
+              </p>
+              <p
+                class="T__StyledText-gjlic1-0 jbStwN TrackDetails__Genre-sc-18wb0c5-9 gIZbJH"
+                data-testid="genre_unavailable"
+              >
+                genre is unavailable
+              </p>
+              <div
+                class="ant-row"
+              >
+                <div
+                  class="ant-col ant-col-8"
+                >
+                  <div
+                    class="ant-statistic"
+                  >
+                    <div
+                      class="ant-statistic-title"
+                    >
+                      Track Price
+                    </div>
+                    <div
+                      class="ant-statistic-content"
+                      style="font-size: 1.2rem; color: rgb(128, 128, 128);"
+                    >
+                      <span
+                        class="ant-statistic-content-value"
+                      >
+                        <span
+                          class="ant-statistic-content-value-int"
+                        >
+                          
+                          0
+                        </span>
+                        <span
+                          class="ant-statistic-content-value-decimal"
+                        >
+                          .00
+                        </span>
+                      </span>
+                      <span
+                        class="ant-statistic-content-suffix"
+                      >
+                        $
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-col ant-col-8"
+                >
+                  <div
+                    class="ant-statistic"
+                  >
+                    <div
+                      class="ant-statistic-title"
+                    >
+                      Track Time
+                    </div>
+                    <div
+                      class="ant-statistic-content"
+                      style="font-size: 1.2rem; color: rgb(128, 128, 128);"
+                    >
+                      <span
+                        class="ant-statistic-content-value"
+                      >
+                        NaN
+                      </span>
+                      <span
+                        class="ant-statistic-content-suffix"
+                      >
+                         s
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-col ant-col-8"
+                >
+                  <div
+                    class="ant-statistic"
+                  >
+                    <div
+                      class="ant-statistic-title"
+                    >
+                      Country
+                    </div>
+                    <div
+                      class="ant-statistic-content"
+                      style="font-size: 1.2rem; color: rgb(128, 128, 128);"
+                    >
+                      <span
+                        class="ant-statistic-content-value"
+                      >
+                        <span
+                          class="ant-statistic-content-value-int"
+                        >
+                          
+                          0
+                        </span>
+                        <span
+                          class="ant-statistic-content-value-decimal"
+                        >
+                          .00
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p
+                class="T__StyledText-gjlic1-0 jbStwN"
+                data-testid="track_preview_unavailable"
+              >
+                Track preview is unavailable
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

@@ -8,10 +8,10 @@ exports[`<Clickable /> component tests should render and match the snapshot 1`] 
       data-testid="clickable"
     >
       <p
-        class="T__StyledText-gjlic1-0 kYcyRq"
+        class="T__StyledText-gjlic1-0 jbStwN"
         data-testid="t"
       >
-        Repository List
+        Itunes List
       </p>
     </div>
   </div>
